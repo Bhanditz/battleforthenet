@@ -15,7 +15,7 @@ img.app-store {
     <section id="bftn-action-form">
       <loader-logo></loader-logo>
       <h1 class="text-center">Red Alert for Net Neutrality!</h1>
-      <call-form v-if="isCallPage" default-campaign="RED-ALERT-battleforthenet-call"></call-form>
+      <call-form v-if="isCallPage" :default-campaign="callPageDefaultCampaign"></call-form>
       <petition-form v-else />
     </section>
 
@@ -148,6 +148,7 @@ img.app-store {
 </template>
 
 <script>
+import settings from '~/config.json'
 import { createMetaTags } from '~/assets/js/helpers'
 import LoaderLogo from '~/components/LoaderLogo'
 import CallForm from '~/components/CallForm'
@@ -171,6 +172,10 @@ export default {
   computed: {
     isCallPage() {
       return this.$route.name === 'call' || this.$route.query.call
+    },
+
+    callPageDefaultCampaign() {
+      return settings.callpowerCampaigns.callPageDefault
     }
   }
 }
