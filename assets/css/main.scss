@@ -149,7 +149,8 @@ code {
   padding: 1rem;
   font-size: 1.4rem;
   background-color: $body-color;
-  color: $body-bg-color;
+  // color: $body-bg-color;
+  color: #000;
   border-radius: $border-radius;
   overflow: hidden;
 }

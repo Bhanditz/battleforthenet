@@ -3,20 +3,20 @@
   .petition-copy {
     font-size: 2.7rem;
     line-height: 1.5;
-    color: #fff;
+    // color: #fff;
     float: left;
     width: 60%;
 
     @include big-screen {
       padding-bottom: 100px;
-      background-image: url('~/assets/images/arrow.svg');
+      background-image: url('~/assets/images/arrow-black.svg');
       background-repeat: no-repeat;
       background-position: 300px 370px;
       background-size: 120px auto;
     }
 
     strong {
-      color: $header-color;
+      // color: $header-color;
       font-weight: normal;
     }
   }
@@ -34,12 +34,12 @@
     }
 
     input.address {
-      width: 58%;
+      width: 63%;
       margin-right: 2%;
     }
 
     input.zip-code {
-      width: 40%;
+      width: 35%;
     }
 
     .letter {
@@ -57,7 +57,7 @@
 
       textarea {
         min-width: 26.5rem;
-        height: 13rem;
+        height: 10rem;
         border-radius: 0;
       }
 
@@ -104,6 +104,15 @@
     form {
       margin-bottom: 3rem;
 
+      input.name {
+        width: 49%;
+        margin-right: 2%;
+      }
+
+      input.email {
+        width: 49%;
+      }
+
       textarea {
         min-width: none;
       }
@@ -115,8 +124,8 @@
 <template>
   <div class="petition-form clearfix">
     <form @submit.prevent="submitForm()">
-      <input v-model.trim="name" type="text" placeholder="Name*" required>
-      <input v-model.trim="email" type="email" placeholder="E-mail*" required>
+      <input v-model.trim="name" type="text" placeholder="Name*" required class="name">
+      <input v-model.trim="email" type="email" placeholder="E-mail*" required class="email">
       <input v-model.trim="address" type="text" placeholder="Address*" required class="address">
       <input v-model.trim="zipCode" type="tel" placeholder="Zip*" required class="zip-code">
       <input v-model.trim="phone" type="tel" placeholder="Phone # (for text list)">

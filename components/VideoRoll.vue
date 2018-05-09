@@ -88,7 +88,7 @@
     }
 
     .circle {
-      background: #494476;
+      background: #fff;
       border-radius: 100%;
       width: 4.2rem;
       height: 4.2rem;
@@ -102,7 +102,7 @@
     }
 
     &:hover:not(:disabled) .circle {
-      background-color: #5f88ff;
+      background-color: #ddd;
     }
   }
 

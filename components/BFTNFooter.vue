@@ -1,6 +1,6 @@
 <style lang="scss">
 .bftn-footer {
-  background-color: #1f1c35;
+  background-color: $footer-bg-color;
   padding: 3rem 3rem 0;
   margin-top: 10rem;
 
@@ -105,9 +105,9 @@
     text-align: center;
     width: 30rem;
     margin: 4rem auto 0;
-    background-color: $body-bg-color;
+    background-color: #000;
     padding: 2rem 0 3rem;
-    color: $muted-text-color;
+    color: #53535f;
     border-radius: $border-radius $border-radius 0 0;
     font-size: 1.6rem;
 

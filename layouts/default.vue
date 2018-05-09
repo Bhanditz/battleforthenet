@@ -2,9 +2,9 @@
 body {
   background-color: $body-bg-color;
   color: $body-color;
-  background-image: url("/images/v2-bg-noise.png");
-  background-repeat: no-repeat;
-  background-position: center top;
+  // background-image: url("/images/v2-bg-noise.png");
+  // background-repeat: no-repeat;
+  // background-position: center top;
 }
 
 .container {
@@ -16,7 +16,19 @@ section {
 }
 
 strong {
-  color: #fff;
+  color: #000;
+}
+
+a, p.disclaimer small a {
+  font-weight: bold;
+  transition: color .1s, background-color .1s, text-decoration .1s;
+
+  &:hover {
+    // color: lighten($link-color, 10%);
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+  }
 }
 </style>
 

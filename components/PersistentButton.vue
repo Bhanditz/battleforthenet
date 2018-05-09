@@ -12,7 +12,7 @@
       white-space: nowrap;
       font-size: 4rem;
       padding: 1.5rem;
-      box-shadow: .5rem .5rem 3.5rem rgba(0, 0, 0, 1.0);
+      box-shadow: .5rem .5rem 3.5rem rgba(0, 0, 0, 0.5);
       transition: box-shadow 0.3s ease-in;
 
       &.btn-phone {
@@ -25,7 +25,7 @@
 
       &:hover {
         color: #fff;
-        box-shadow: 1rem 1rem 3.5rem rgba(0, 0, 0, 1.0);
+        box-shadow: 1rem 1rem 3.5rem rgba(0, 0, 0, 0.5);
       }
     }
 

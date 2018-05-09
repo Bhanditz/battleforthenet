@@ -14,7 +14,7 @@
   }
 
   .content {
-    background-color: #1f1c35;
+    background-color: $footer-bg-color;
     border-radius: $border-radius;
     padding: 10px;
   }
