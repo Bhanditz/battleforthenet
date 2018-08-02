@@ -396,7 +396,7 @@
 
 <script>
 import axios from 'axios'
-import { createMetaTags, formatNumber, getDonateLink, openPopup } from '~/assets/js/helpers'
+import { createMetaTags, formatNumber, getDonateLink, openPopup, pingCounter } from '~/assets/js/helpers'
 import ScoreboardPhoto from '~/components/ScoreboardPhoto'
 import ScoreboardActionBox from '~/components/ScoreboardActionBox'
 import ScoreboardForm from '~/components/ScoreboardForm'
@@ -568,12 +568,14 @@ export default {
 
     write() {
       this.$trackEvent('scoreboard_rep_write_button', 'click')
+      pingCounter(`letter_${this.rep.bioguide_id}`)
       this.modal = 'write'
       this.modalVisible = true
     },
 
     tweet() {
       this.$trackEvent('scoreboard_rep_tweet_button', 'click')
+      pingCounter(`tweet_${this.rep.bioguide_id}`)
       openPopup(this.twitterURL, 'share')
     }
   }
